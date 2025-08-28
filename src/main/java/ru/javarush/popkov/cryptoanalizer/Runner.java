@@ -1,7 +1,9 @@
 package ru.javarush.popkov.cryptoanalizer;
 
 public class Runner {
-    public static void main(String[] args){
+    public static void beginner(String args)
+
+    {
         System.out.println("rere");
 
     }
