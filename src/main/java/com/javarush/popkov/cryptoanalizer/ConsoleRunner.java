@@ -18,7 +18,7 @@ public class ConsoleRunner {
         PathBuilder readFILE= new PathBuilder(application);
 
 
-      // MainController mainController = new MainController(application);
+      MainController mainController = new MainController(readFILE.inputFilePath);
       //  ConsoleApp application = new ConsoleApp(mainController, menu);
         //run console app
       //  application.run(args);

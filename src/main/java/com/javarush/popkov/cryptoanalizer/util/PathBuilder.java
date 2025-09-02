@@ -1,7 +1,7 @@
 package com.javarush.popkov.cryptoanalizer.util;
 
 import com.javarush.popkov.cryptoanalizer.exeption.AppExeption;
-import com.javarush.popkov.cryptoanalizer.util.FileValidator;
+import com.javarush.popkov.cryptoanalizer.util.PathBuilder;
 import javax.imageio.IIOException;
 import java.io.IOException;
 import java.nio.file.*;
@@ -18,12 +18,12 @@ public class PathBuilder {
      * @return Полный путь к файлу.
      */
     public String filename;
-
+ public Path inputFilePath;
     public PathBuilder(ConsoleApp application) {
         this.filename =application.filename;
 
-        buildPath(this.filename);
 
+this.inputFilePath=buildPath(application.filename);
 
 
     }
@@ -38,8 +38,8 @@ public class PathBuilder {
 
         System.out.println("Полный путь к файлу:" + filePath.toString());
 
-      //  FileValidator.validateForReading(this.filename);
-        return filePath.resolve(this.filename);
+        FileValidator.validateForReading(filePath.toString());
+        return filePath;//.resolve(this.filename);
     }
 
     // public static void main(String[] args) {

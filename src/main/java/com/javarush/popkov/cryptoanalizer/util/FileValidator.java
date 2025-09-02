@@ -47,21 +47,21 @@ public class FileValidator {
     }
 
     private static Path validatePath(String filename) {
+        /*
         for (String pathPart : filename.split(SYSTEM_SEPARATOR)) {
-            /*
-            if (FORBIDDEN_DIRS_FILES.contains(pathPart)) {
-                throw new AppExeption("Путь содержит запрещенную часть:" + pathPart);
+
+            if (FORBIDDEN_DIRS_FILES.contains(filename)) {
+                throw new AppExeption("Путь содержит запрещенную часть:" + filename);
             }
-        }
-        try{
-            return Path.of(filename);
-    }catch (InvalidPathException ex){
-            throw new AppExeption("Некорректный путь"+ex.getMessage());
-        }
-*/
-            System.out.println(pathPart);
+        }*/
+            try {
+                return Path.of(filename);
+            } catch (InvalidPathException ex) {
+                throw new AppExeption("Некорректный путь" + ex.getMessage());
+            }
+
 
         }
-        return Path.of(filename);
-    }
+
+
 }
