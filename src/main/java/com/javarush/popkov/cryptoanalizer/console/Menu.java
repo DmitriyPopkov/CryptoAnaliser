@@ -6,7 +6,7 @@ import static com.javarush.popkov.cryptoanalizer.console.Messages.*;
 public class Menu {
 
     public static Scanner scanner;
-   public  int INPUTMENU;
+   public  int inputmenu;
 
 
 
@@ -43,7 +43,7 @@ do{
         } while (mode < 0) ;
 
         System.out.println(outMode[mode]);
-this.INPUTMENU=mode;
+this.inputmenu=mode;
         }
 /*
     public int getINPUTMENU() {

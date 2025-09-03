@@ -12,25 +12,25 @@ import static com.javarush.popkov.cryptoanalizer.console.Messages.outMode;
 public class ConsoleApp {
     public  String filename;
     private  final Scanner scanner;
-   public   Menu inputmenu;
+   public   Menu inputmenu_Console;
    public int shift;
 
     public  ConsoleApp(Menu inputmenu,Scanner scanner) {
 this.scanner=scanner;
-        this.inputmenu=inputmenu;
+        this.inputmenu_Console=inputmenu;
 
 
 
-        System.out.print("Введите имя файла для режима  "+ outMode[this.inputmenu.INPUTMENU]+"   " );
+        System.out.print("Введите имя файла для режима  "+ outMode[inputmenu.inputmenu]+"   " );
         this.filename =getinputPath();
-if (this.inputmenu.INPUTMENU!=3){
+if (inputmenu.inputmenu!=3){
     String shift1;
 
     System.out.print("Введите ключ  ");
     shift1=getScanner().nextLine();
     try {
+       // this.shift=((32 - Integer.parseInt(shift1)) % 32);
         this.shift=Integer.parseInt(shift1);
-
     } catch (NumberFormatException e) {
         throw new AppExeption(e.getMessage());
     }

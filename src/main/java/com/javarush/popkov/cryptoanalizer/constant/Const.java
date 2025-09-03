@@ -8,5 +8,7 @@ public interface Const {
             "text" +
             File.separator;
 
+String ENCRYPTED_PATH="C:\\Users\\Administrator\\IdeaProjects\\CryptoAnalizer\\CryptoAnalizer\\text\\encryptedText.txt";
+    String DECRYPTED_PATH="C:\\Users\\Administrator\\IdeaProjects\\CryptoAnalizer\\CryptoAnalizer\\text\\decryptedText.txt";
 
 }
