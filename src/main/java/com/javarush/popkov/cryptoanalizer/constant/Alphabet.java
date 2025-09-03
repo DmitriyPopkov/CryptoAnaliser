@@ -1,4 +1,14 @@
 package com.javarush.popkov.cryptoanalizer.constant;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Alphabet {
+
+
+    public static final char[] LATIN_ALPHABET ="abcdefghijklmnopqrstuvwxyz;".toCharArray();
+    public static final char[] RUSSIAN_ALPHABET = "абвгдежзийклмнопрстуфхцчшщъыьэюя;".toCharArray();
+    public static final char[] RUSSIAN_ALPHABET_UPPER ="АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ;".toCharArray();
+
+
 }
