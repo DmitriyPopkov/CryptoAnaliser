@@ -18,7 +18,8 @@ public class Menu {
 
             System.out.println(EncodeMenu + "  1");
             System.out.println(DecodeMenu + "  2");
-            System.out.println(ExitMenu + "  3");
+            System.out.println( BruteForce+ "  3");
+        System.out.println(ExitMenu + "  4");
             System.out.print("Выбран режим  ");
 do{
     inputmode = input.nextLine();
@@ -28,8 +29,8 @@ do{
                 case "1" -> 0;
                 case "2" -> 1;
                 case "3" -> 2;
-                // case "4" -> 4;
-                // case "5" -> 4;
+                 case "4" -> 3;
+               //  case "5" -> 4;
                 default -> {
 
                     System.out.println("INCORRECT_SELECTION");

@@ -10,5 +10,6 @@ public interface Const {
 
 String ENCRYPTED_PATH="C:\\Users\\Administrator\\IdeaProjects\\CryptoAnalizer\\CryptoAnalizer\\text\\encryptedText.txt";
     String DECRYPTED_PATH="C:\\Users\\Administrator\\IdeaProjects\\CryptoAnalizer\\CryptoAnalizer\\text\\decryptedText.txt";
-
+    String METRIKA_PATH="C:\\Users\\Administrator\\IdeaProjects\\CryptoAnalizer\\CryptoAnalizer\\text\\metrika.txt";
+    String BRUTFORCE_PATH="C:\\Users\\Administrator\\IdeaProjects\\CryptoAnalizer\\CryptoAnalizer\\text\\brutforsText.txt";
 }

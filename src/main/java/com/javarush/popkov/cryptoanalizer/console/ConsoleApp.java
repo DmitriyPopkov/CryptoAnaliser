@@ -19,22 +19,14 @@ public class ConsoleApp {
 this.scanner=scanner;
         this.inputmenu_Console=inputmenu;
 
+            inputShift(inputmenu);
 
 
-        System.out.print("Введите имя файла для режима  "+ outMode[inputmenu.inputmenu]+"   " );
-        this.filename =getinputPath();
-if (inputmenu.inputmenu!=3){
-    String shift1;
 
-    System.out.print("Введите ключ  ");
-    shift1=getScanner().nextLine();
-    try {
-       // this.shift=((32 - Integer.parseInt(shift1)) % 32);
-        this.shift=Integer.parseInt(shift1);
-    } catch (NumberFormatException e) {
-        throw new AppExeption(e.getMessage());
-    }
-}
+
+        if (inputmenu.inputmenu==3) {
+            System.exit(0);
+        }
     }
 
 
@@ -50,6 +42,27 @@ if (inputmenu.inputmenu!=3){
 
    public Scanner getScanner() {
        return scanner;
+   }
+
+   public int inputShift(Menu inputmenu){
+       System.out.print("Введите имя файла для режима  "+ outMode[inputmenu.inputmenu]+"   " );
+       this.filename =getinputPath();
+       if (inputmenu.inputmenu!=2){
+           String shift1;
+
+           System.out.print("Введите ключ  ");
+           shift1=getScanner().nextLine();
+           try {
+               // this.shift=((32 - Integer.parseInt(shift1)) % 32);
+               this.shift=Integer.parseInt(shift1);
+           } catch (NumberFormatException e) {
+               throw new AppExeption(e.getMessage());
+           }
+       }else {
+           this.shift=1;
+
+       }
+           return shift;
    }
 
 }
