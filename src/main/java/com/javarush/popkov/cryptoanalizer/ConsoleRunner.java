@@ -1,9 +1,9 @@
 package com.javarush.popkov.cryptoanalizer;
-import com.javarush.popkov.cryptoanalizer.console.Menu;
 import com.javarush.popkov.cryptoanalizer.controller.MainController;
-
+import com.javarush.popkov.cryptoanalizer.console.Menu;
 import com.javarush.popkov.cryptoanalizer.util.PathBuilder;
 import com.javarush.popkov.cryptoanalizer.console.ConsoleApp;
+
 
 
 import java.util.Scanner;
@@ -21,7 +21,7 @@ public class ConsoleRunner {
         MainController mainController = new MainController(readFILE.inputFilePath, application.shift, inputmenu.inputmenu);
         while (mainController.pick_upShift == 1) {
 
-            MainController mainController_pickup = new MainController(readFILE.inputFilePath, MainController.shift, inputmenu.inputmenu);
+           new MainController(readFILE.inputFilePath, MainController.shift, inputmenu.inputmenu);
         }
     }
 

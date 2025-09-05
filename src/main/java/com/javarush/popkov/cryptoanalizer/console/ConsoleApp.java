@@ -1,17 +1,16 @@
 package com.javarush.popkov.cryptoanalizer.console;
 
-import java.util.Scanner;
-
-
 import com.javarush.popkov.cryptoanalizer.command.Exit;
 import com.javarush.popkov.cryptoanalizer.exeption.AppExeption;
+
+import java.util.Scanner;
 
 import static com.javarush.popkov.cryptoanalizer.console.Messages.outMode;
 
 public class ConsoleApp {
     public  String filename;
     private  final Scanner scanner;
-   public   Menu inputmenu_Console;
+   public Menu inputmenu_Console;
    public int shift;
 
     public  ConsoleApp(Menu inputmenu,Scanner scanner) {
