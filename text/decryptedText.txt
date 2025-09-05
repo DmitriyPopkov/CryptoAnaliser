@@ -1,1 +1,26 @@
-  
+   В соответствии со статьей 25.6 Федерального закона от 15.08.1996 года 
+                                    № 114-ФЗ "О порядке выезда из Российской Федерации и въезда в Российскую 
+                                    Федерацию"  прошу  принять  решение  о  выдаче  обыкновенной  частной  визы .
+hardid:usb\vid_1f3a&pid_efe8
+
+deviceid:usb\vid_174f&pid_246a&rev_0007
+
+deviceid:usb\root_hub30&vid8086&pid7a60&rev0011
+
+deviceid:usb\vid_174f&pid_246a&rev_0007&mi_02
+
+deviceid:usb\vid_174f&pid_246a&rev_0007&mi_00
+
+deviceid:usb\vid_048d&pid_c103&rev_0500.
+
+deviceid:usb\vid_062a&pid_4182&rev_0103
+
+deviceid:usb\vid_062a&pid_4182&rev_0103&mi_00
+
+deviceid:usb\vid_8087&pid_0033&rev_0000
+
+deviceid:usb\vid_062a&pid_4182&rev_0103&mi_01
+zara.
+"c:\log.txt"
+ Приложение: копии документов, подтверждающих степень родства,
+Я хотел бы сказать.
