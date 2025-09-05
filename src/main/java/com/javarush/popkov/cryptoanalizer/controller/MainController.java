@@ -2,9 +2,11 @@ package com.javarush.popkov.cryptoanalizer.controller;
 import java.io.*;
 
 import com.javarush.popkov.cryptoanalizer.command.BruteForce;
+import com.javarush.popkov.cryptoanalizer.command.Exit;
 import com.javarush.popkov.cryptoanalizer.exeption.AppExeption;
 import com.javarush.popkov.cryptoanalizer.command.Encode;
 import com.javarush.popkov.cryptoanalizer.command.Decode;
+import com.javarush.popkov.cryptoanalizer.util.FileValidator;
 
 import javax.imageio.IIOException;
 import java.nio.file.Path;
@@ -19,10 +21,12 @@ public int inputmenu_Main;
     public static int shift;
 public Path readFILE;
     public Path outputFilePath;
+
     public MainController(Path inputFilePath,int shift,int inputmenu ) {
+
         String outputFilePath="";
 this.inputmenu_Main=inputmenu;
-      // int decodedShift =Encode.decodedShift;
+
 
 
 
@@ -42,10 +46,11 @@ this.inputmenu_Main=inputmenu;
         this.readFILE=inputFilePath;
         MainController.shift=shift;
         this.outputFilePath= of(outputFilePath);
+        FileValidator.validateForWriting(outputFilePath);
 
        try (BufferedReader reader = new BufferedReader(new FileReader(this.readFILE.toFile()));
            BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
-           ;
+
            String line;
            while ((line = reader.readLine()) != null) {
                if ((inputmenu == 0)) {
@@ -91,7 +96,7 @@ this.inputmenu_Main=inputmenu;
               System.out.println("Взлом завершен, ключ: " + shift);
              System.out.println("Результат сохранен в файле: " + outputFilePath);
              this.pick_upShift=0;
-            System.exit(0);
+            Exit.exit();
           }else {
              MainController.shift=BruteForce.bruteforceShift(shift);
              this.pick_upShift=1;

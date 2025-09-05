@@ -1,13 +1,12 @@
 package com.javarush.popkov.cryptoanalizer.command;
 
 
-import com.javarush.popkov.cryptoanalizer.controller.MainController;
-import com.javarush.popkov.cryptoanalizer.command.Decode;
+
 
 import static com.javarush.popkov.cryptoanalizer.constant.Alphabet.*;
 
 public class Encode {
-    public  static int decodedShift;
+
 
     public static String encrypt(String text, int shift) {
         StringBuilder encryptedText = new StringBuilder();
@@ -22,7 +21,7 @@ public class Encode {
     private static char encryptCharacter(char character, int shift) {
 
         if (( character >='a' && character <='z')||( character >='A' && character <='Z')) {
-           // Encode.decodedShift=26;
+
             if (Character.isLowerCase(character)) {
 
                 return encryptInAlphabet(character, LATIN_ALPHABET, shift);
@@ -35,26 +34,19 @@ public class Encode {
             if ( character >='а' && character <='я')
 
        {
-          // Encode.decodedShift=33;
+
             return encryptInAlphabet(character, RUSSIAN_ALPHABET, shift);
         } else
             if ( character >='А' && character <='Я'){
             return encryptInAlphabet(character, RUSSIAN_ALPHABET_UPPER, shift);
         }
 
-        return encryptInAlphabet(character, SYMBOLS, shift); // Возврат символа без изменений, если он не буква
+        return encryptInAlphabet(character, SYMBOLS, shift);
     }
 
     private static char encryptInAlphabet(char character, char[] alphabet, int shift) {
         int index = -1;
-        // if (character=='.'){
-          //  character='¬';
-         //   return character;
-       // }
-       //  if (character=='¬'){
-        //     character='.';
-        //     return character;
-       //  }
+
 
         for (int i = 0; i< alphabet.length ;i++){
             if (alphabet[i] == character) {
@@ -64,11 +56,11 @@ public class Encode {
         }
         if (index != -1) {
             int newIndex = (index + shift) % alphabet.length;
-            return alphabet[(newIndex + alphabet.length) % alphabet.length]; // Обработка отрицательного сдвига
+            return alphabet[(newIndex + alphabet.length) % alphabet.length];
         }
 
 
-        return character; // Возврат символа без изменений, если он не найден
+        return character;
     }
 
 }

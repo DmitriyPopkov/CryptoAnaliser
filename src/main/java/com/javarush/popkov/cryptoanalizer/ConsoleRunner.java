@@ -24,9 +24,7 @@ public class ConsoleRunner {
             MainController mainController_pickup = new MainController(readFILE.inputFilePath, MainController.shift, inputmenu.inputmenu);
         }
     }
-    //  ConsoleApp application = new ConsoleApp(mainController, menu);
-    //run console app
-    // / application.run(args);
+
 
 
 }

@@ -1,11 +1,11 @@
 package com.javarush.popkov.cryptoanalizer.console;
 import java.util.Scanner;
-import com.javarush.popkov.cryptoanalizer.console.ConsoleApp;
+
 import static com.javarush.popkov.cryptoanalizer.console.Messages.*;
 
 public class Menu {
 
-    public static Scanner scanner;
+    public  Scanner scanner;
    public  int inputmenu;
 
 
@@ -46,11 +46,6 @@ do{
         System.out.println(outMode[mode]);
 this.inputmenu=mode;
         }
-/*
-    public int getINPUTMENU() {
 
-        return this.INPUTMENU;
-    }
-*/
 
 }

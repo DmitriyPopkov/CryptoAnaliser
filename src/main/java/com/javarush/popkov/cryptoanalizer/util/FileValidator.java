@@ -1,21 +1,22 @@
 package com.javarush.popkov.cryptoanalizer.util;
 
 import com.javarush.popkov.cryptoanalizer.exeption.AppExeption;
-import com.javarush.popkov.cryptoanalizer.util.PathBuilder;
 
-import java.nio.file.FileSystems;
+
+import java.io.File;
+
 import java.nio.file.Files;
 import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 import java.util.List;
 
-import static java.lang.System.getProperty;
+
+
 
 public class FileValidator {
     private static final List<String> FORBIDDEN_DIRS_FILES =
             List.of(".bash_history", ".bash_profile", "etc", "proc");
-    public static final String SYSTEM_SEPARATOR = FileSystems.getDefault().getSeparator();
-    public String filename;
+
 
     public static void validateForWriting(String filename) {
 
@@ -47,14 +48,23 @@ public class FileValidator {
     }
 
     private static Path validatePath(String filename) {
-        /*
-        for (String pathPart : filename.split(SYSTEM_SEPARATOR)) {
-
-            if (FORBIDDEN_DIRS_FILES.contains(filename)) {
-                throw new AppExeption("Путь содержит запрещенную часть:" + filename);
+        File fileName = new File(filename);
+        String fileName1 = fileName.getName();
+        Path fileName2;
+        String fileName3;
+        int lastIndexOfDot = fileName1.lastIndexOf(".");
+        if (lastIndexOfDot > 0 && lastIndexOfDot < fileName.length() - 1) {
+            fileName2 = Path.of(fileName1.substring(lastIndexOfDot + 1));
+            fileName3 = fileName2.toString();
+            if (FORBIDDEN_DIRS_FILES.contains(fileName3)) {
+                throw new AppExeption("Имя содержит запрещенную часть : " + filename);
             }
-        }*/
+        }
+
+
+
             try {
+
                 return Path.of(filename);
             } catch (InvalidPathException ex) {
                 throw new AppExeption("Некорректный путь" + ex.getMessage());
